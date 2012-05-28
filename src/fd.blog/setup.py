@@ -28,6 +28,8 @@ setup(name='fd.blog',
           'setuptools',
           'plone.app.dexterity',
           'plone.namedfile [blobs]',
+          'collective.upload',
+          'sc.social.like',
           # -*- Extra requirements: -*-
       ],
       entry_points="""
