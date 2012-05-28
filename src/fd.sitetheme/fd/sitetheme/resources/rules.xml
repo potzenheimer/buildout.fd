@@ -32,6 +32,9 @@
             <link rel="shortcut icon" href="/++theme++meetshaus.jmstheme/images/favicon.ico" type="images/x-icon" />
         </after>-->
 
+        <replace css:theme="#editbar"
+            content="//div[@data-iframe='toolbar']" />
+
         <!-- Copy over the id/class attributes on the body tag.
              This is important for per-section styling -->
         <merge attributes="class" css:content="body" css:theme="body" />
@@ -59,15 +62,9 @@
         <!-- Breadcrumbs -->
         <replace css:content-children='#portal-breadcrumbs' css:theme-children='#breadcrumbs' />
 
-        <replace css:content="#banner-viewlet" css:theme-children="#hero-box" />
-
-        <!-- Subnavigation viewlet -->
-
-        <replace css:content="#subnavigation" css:theme="#sub-nav" />
-
         <!-- Document Content -->
         <replace css:content-children="#content" css:theme-children="#main-content" />
-        <before css:content="#edit-bar" css:theme="#document-content" />
+        <!--<before css:content="#edit-bar" css:theme="#document-content" />-->
         <before css:content=".portalMessage" css:theme="#document-content" />
 
         <!-- Columns -->
