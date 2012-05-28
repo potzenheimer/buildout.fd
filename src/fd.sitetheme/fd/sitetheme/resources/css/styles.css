@@ -144,16 +144,16 @@ a:hover {
   color: #005580;
   text-decoration: underline;
 }
-.row {
+.row-fixed {
   margin-left: -20px;
   *zoom: 1;
 }
-.row:before,
-.row:after {
+.row-fixed:before,
+.row-fixed:after {
   display: table;
   content: "";
 }
-.row:after {
+.row-fixed:after {
   clear: both;
 }
 [class*="span"] {
