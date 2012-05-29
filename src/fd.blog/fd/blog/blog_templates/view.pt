@@ -17,9 +17,9 @@
   <p class="documentDescription" tal:condition="context/Description"
     tal:content="context/Description" />
 
-  <section tal:condition="view/has_entries">
+  <section tal:condition="view/blogitems">
 
-    <tal:block tal:repeat="item view/blog_entries">
+    <tal:block tal:repeat="item view/blogitems">
       <article>
         <div class="page-header">
           <h2><a href="" tal:attributes="href item/getURL"

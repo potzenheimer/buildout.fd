@@ -1,27 +1,17 @@
 from five import grok
 from plone.directives import dexterity, form
-
 from zope import schema
-from zope.schema.interfaces import IContextSourceBinder
-from zope.schema.vocabulary import SimpleVocabulary, SimpleTerm
-
-from zope.interface import invariant, Invalid
-
-from z3c.form import group, field
-
 from plone.namedfile.interfaces import IImageScaleTraversable
-from plone.namedfile.field import NamedImage, NamedFile
-from plone.namedfile.field import NamedBlobImage, NamedBlobFile
+from plone.namedfile.field import NamedBlobImage
 
 from plone.app.textfield import RichText
-
-from z3c.relationfield.schema import RelationList, RelationChoice
-from plone.formwidget.contenttree import ObjPathSourceBinder
-
+try:
+    from plone.app.discussion.interfaces import IConversation
+    USE_PAD = True
+except ImportError:
+    USE_PAD = False
 from fd.blog import MessageFactory as _
 
-
-# Interface class; used to define content-type schema.
 
 class IBlogEntry(form.Schema, IImageScaleTraversable):
     """
@@ -31,6 +21,10 @@ class IBlogEntry(form.Schema, IImageScaleTraversable):
         title=_(u"Blog Entry"),
         description=_(u"Please enter main body text for this blog entry"),
         required=False,
+    )
+    allow_discussion = schema.Bool(
+        title=_(u"Allow discussion on this item?"),
+        default=True,
     )
 
 
@@ -42,3 +36,18 @@ class View(grok.View):
     grok.context(IBlogEntry)
     grok.require('zope2.View')
     grok.name('view')
+
+    def commentsEnabled(self, ob):
+        if USE_PAD:
+            conversation = IConversation(ob)
+            return conversation.enabled()
+        else:
+            return self.portal_discussion.isDiscussionAllowedFor(ob)
+
+    def commentCount(self, ob):
+        if USE_PAD:
+            conversation = IConversation(ob)
+            return len(conversation)
+        else:
+            discussion = self.portal_discussion.getDiscussionFor(ob)
+            return discussion.replyCount(ob)

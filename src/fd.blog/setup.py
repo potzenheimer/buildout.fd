@@ -28,8 +28,10 @@ setup(name='fd.blog',
           'setuptools',
           'plone.app.dexterity',
           'plone.namedfile [blobs]',
+          'plone.formwidget.recaptcha',
           'collective.upload',
           'sc.social.like',
+          'fourdigits.portlet.twitter',
           # -*- Extra requirements: -*-
       ],
       entry_points="""
