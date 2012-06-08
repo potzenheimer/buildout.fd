@@ -9,5 +9,9 @@ $(document).ready(function () {
         // enhancement.
         return;
     }
+    $(function () {
+        $('a[rel=tooltip]').tooltip();
+        $('span[rel=twipsy]').tooltip();
+    });
 });
 }(jQuery));

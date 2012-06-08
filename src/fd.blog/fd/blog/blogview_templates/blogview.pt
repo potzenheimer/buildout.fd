@@ -38,13 +38,17 @@
 
           <div class="row-fluid">
           <div class="span9">
+            <tal:block tal:condition="python:view.commentsEnabled(item.getObject())">
               <a href="" class="btn btn-small"
-                 tal:condition="python:view.commentsEnabled(item.getObject())" 
-                tal:attributes="href item/getURL">
+                 tal:define="comment_count python:view.commentCount(item.getObject())"
+                 rel="tooltip"
+                 tal:attributes="href item/getURL;
+                                 data-original-title string:${comment_count} Kommentare">
                 <i class="icon-comment" />
                   <span tal:replace="python:view.commentCount(item.getObject())" />
                   <span i18n:translate="">Comments</span>
               </a>
+            </tal:block>
           </div>
           <div class="span3">
             <a href="" class="btn btn-small"
