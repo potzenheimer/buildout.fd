@@ -14,26 +14,46 @@
     <h1 tal:content="context/Title">Title inserted here</h1>
   </header>
 
-  <p class="documentDescription" tal:condition="context/Description"
+  <p class="documentDescription lead" tal:condition="context/Description"
     tal:content="context/Description" />
 
-  <section tal:condition="view/blogitems">
+  <section tal:condition="view/blogitems"
+    tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime;">
 
     <tal:block tal:repeat="item view/blogitems">
       <article>
         <div class="page-header">
-          <h2><a href="" tal:attributes="href item/getURL"
+          <h2>
+            <a href="" tal:attributes="href item/getURL"
                 tal:content="item/Title" />
+              <small tal:content="python:toLocalizedTime(item.effective)" />
           </h2>
+        </div>
           <p tal:condition="item/Description"
+            class="documentDescription lead"
             tal:content="item/Description" />
 
           <div tal:condition="item/text"
             tal:content="structure item/text/output" />
 
-          <a href="" tal:attributes="href item/getURL">
-            Weiterlesen</a>
-        </div>
+          <div class="row-fluid">
+          <div class="span9">
+              <a href="" class="btn btn-small"
+                 tal:condition="python:view.commentsEnabled(item.getObject())" 
+                tal:attributes="href item/getURL">
+                <i class="icon-comment" />
+                  <span tal:replace="python:view.commentCount(item.getObject())" />
+                  <span i18n:translate="">Comments</span>
+              </a>
+          </div>
+          <div class="span3">
+            <a href="" class="btn btn-small"
+              tal:attributes="href item/getURL">
+              <i class="icon-eye-open" />
+              Weiterlesen</a>
+          </div>
+          </div>
+        <hr />
       </article>
     </tal:block>
 
