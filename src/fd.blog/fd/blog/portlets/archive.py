@@ -8,10 +8,10 @@ from zope import schema
 from zope.formlib import form
 
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-from rgd.blog.utils import find_assignment_context
-from rgd.blog.blog_entry import IBlogEntry
+from fd.blog.utils import find_assignment_context
+from fd.blog.blogentry import IBlogEntry
 
-from rgd.blog import MessageFactory as _
+from fd.blog import MessageFactory as _
 
 MONTHVOCAB = {'month_1': _(u'month_1'),
               'month_2': _(u'month_2'),
