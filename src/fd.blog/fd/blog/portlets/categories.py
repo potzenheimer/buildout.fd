@@ -9,8 +9,10 @@ from zope import schema
 from zope.formlib import form
 
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-from fd.blog.utils import find_assignment_context
+from Products.CMFPlone.utils import safe_unicode
 
+from fd.blog.utils import find_assignment_context
+from fd.blog.blogentry import IBlogEntry
 from fd.blog import MessageFactory as _
 
 
@@ -74,6 +76,12 @@ class Renderer(base.Renderer):
                                      self.data.archive_view,
                                      sub)
         return url
+
+    def count_entries(self, subject):
+        catalog = getToolByName(self.context, 'portal_catalog')
+        brains = catalog(object_provides=IBlogEntry.__identifier__,
+                         Subject=subject.encode('utf-8'))
+        return len(brains)
 
 
 class AddForm(base.AddForm):
