@@ -13,6 +13,9 @@
     <header class="page-header">
       <h1 tal:content="context/Title">Title inserted here</h1>
     </header>
+    <section tal:condition="context/Description">
+      <p class="lead" tal:content="context/Description" />
+    </section>
     <section tal:condition="context/text">
       <div tal:replace="structure context/text/output" />
     </section>

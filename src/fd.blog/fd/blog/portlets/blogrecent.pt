@@ -21,6 +21,7 @@
                     mehr
                 </a>
         </li>
+        <li class="divider"></li>
       </tal:block>
     </ul>
 </div>

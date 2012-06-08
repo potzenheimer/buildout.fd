@@ -82,7 +82,7 @@ class Renderer(base.Renderer):
         assignment_context = find_assignment_context(self.data, self.context)
         self.folder_path = '/'.join(assignment_context.getPhysicalPath())
         self.folder_url = assignment_context.absolute_url()
-        brains = catalog(path={'query': self.folder_path, 'depth': 1},
+        brains = catalog(path={'query': self.folder_path, 'depth': 3},
                          object_provides=IBlogEntry.__identifier__,)
         if not brains:
             return

@@ -8,9 +8,9 @@ from zope import schema
 from zope.formlib import form
 
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-from rgd.blog.blog_entry import IBlogEntry
+from fd.blog.blogentry import IBlogEntry
 
-from rgd.blog import MessageFactory as _
+from fd.blog import MessageFactory as _
 
 
 class IBlogRecentPortlet(IPortletDataProvider):

@@ -6,15 +6,14 @@
         <i18n:block translate="">Categories</i18n:block>
     </h4>
 
-    <ul>
-        <li repeat="subject view/keywords">
-          <a tal:attributes="href python:view.archive_url(subject)">
-              <span class="archive-category"
-                  tal:content="subject">
-                  Category
-              </span>
-          </a>
+    <ul class="nav nav-pills nav-stacked"
+        tal:define="keywords view/keywords">
+      <tal:block tal:repeat="item keywords">
+        <li tal:define="search_url python:view.archive_url(item)">
+            <a href="" tal:attributes="href search_url"
+              tal:content="item" />
         </li>
+      </tal:block>
     </ul>
 
 </div>
