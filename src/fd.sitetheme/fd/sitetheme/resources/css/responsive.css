@@ -1,5 +1,5 @@
 /*!
- * Bootstrap Responsive v2.0.3
+ * Bootstrap Responsive v2.0.4
  *
  * Copyright 2012 Twitter, Inc
  * Licensed under the Apache License v2.0
@@ -185,16 +185,16 @@
   }
 }
 @media (min-width: 768px) and (max-width: 979px) {
-  .row-fixed {
+  .row {
     margin-left: -20px;
     *zoom: 1;
   }
-  .row-fixed:before,
-  .row-fixed:after {
+  .row:before,
+  .row:after {
     display: table;
     content: "";
   }
-  .row-fixed:after {
+  .row:after {
     clear: both;
   }
   [class*="span"] {
@@ -396,16 +396,16 @@
   }
 }
 @media (min-width: 1200px) {
-  .row-fixed {
+  .row {
     margin-left: -30px;
     *zoom: 1;
   }
-  .row-fixed:before,
-  .row-fixed:after {
+  .row:before,
+  .row:after {
     display: table;
     content: "";
   }
-  .row-fixed:after {
+  .row:after {
     clear: both;
   }
   [class*="span"] {
@@ -619,11 +619,18 @@
   body {
     padding-top: 0;
   }
-  .navbar-fixed-top {
+  .navbar-fixed-top,
+  .navbar-fixed-bottom {
     position: static;
+  }
+  .navbar-fixed-top {
     margin-bottom: 18px;
   }
-  .navbar-fixed-top .navbar-inner {
+  .navbar-fixed-bottom {
+    margin-top: 18px;
+  }
+  .navbar-fixed-top .navbar-inner,
+  .navbar-fixed-bottom .navbar-inner {
     padding: 5px;
   }
   .navbar .container {

@@ -25,7 +25,12 @@
           <h2><a href="" tal:attributes="href item/getURL"
                 tal:content="item/Title" />
           </h2>
-          <p tal:content="item/Description" />
+          <p tal:condition="item/Description"
+            tal:content="item/Description" />
+
+          <div tal:condition="item/text"
+            tal:content="structure item/text/output" />
+
           <a href="" tal:attributes="href item/getURL">
             Weiterlesen</a>
         </div>

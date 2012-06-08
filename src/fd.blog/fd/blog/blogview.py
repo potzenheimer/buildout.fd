@@ -8,7 +8,7 @@ from Products.CMFPlone.PloneBatch import Batch
 
 from plone.app.discussion.interfaces import IConversation
 from plone.app.contentlisting.interfaces import IContentListing
-from plone.app.layout.navigation import INavigationRoot
+from plone.app.layout.navigation.interfaces import INavigationRoot
 
 from fd.blog.blogentry import IBlogEntry
 
@@ -42,7 +42,7 @@ class BlogView(grok.View):
         context = aq_inner(self.context)
         obj_provides = IBlogEntry.__identifier__
         path = '/'.join(context.getPhysicalPath())
-        return dict(path={'query': path, 'depth': 1},
+        return dict(path={'query': path, 'depth': 2},
                     object_provides=obj_provides,
                     sort_on='effective', sort_order='reverse')
 
