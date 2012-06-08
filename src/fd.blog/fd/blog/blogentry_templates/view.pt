@@ -9,9 +9,12 @@
 
 <metal:main fill-slot="main">
   <metal:content-core define-macro="main">
-  <article class="blog-entry">
+  <article class="blog-entry"
+    tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime;">
     <header class="page-header">
-      <h1 tal:content="context/Title">Title inserted here</h1>
+      <h1><span tal:content="context/Title">Title inserted here</span>
+        <small tal:content="python:toLocalizedTime(context.EffectiveDate())" />
+      </h1>
     </header>
     <section tal:condition="context/Description">
       <p class="lead" tal:content="context/Description" />

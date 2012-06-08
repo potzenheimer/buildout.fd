@@ -4217,6 +4217,61 @@ a.badge:hover {
   border-left: 13px solid rgba(0, 0, 0, 0.05);
   clear: both;
 }
+#category {
+  font-size: 11px;
+  margin: 18px 0px;
+}
+#category a.link-category,
+#category span.selectedTag {
+  padding: 0.25em 0.5em;
+  background: #0088cc;
+  color: #ffffff;
+  border-radius: 0.5em;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+#category a.link-category:hover {
+  background: #005580;
+}
+#category .separator {
+  display: none;
+}
+.listingBar {
+  margin-left: 0;
+  margin-bottom: 18px;
+  list-style: none;
+  text-align: center;
+  *zoom: 1;
+}
+.listingBar:before,
+.listingBar:after {
+  display: table;
+  content: "";
+}
+.listingBar:after {
+  clear: both;
+}
+.listingBar a {
+  display: inline-block;
+  padding: 5px 14px;
+  background-color: #fff;
+  border: 1px solid #999999;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+.listingBar a.next {
+  float: right;
+}
+.listingBar a.previous {
+  float: left;
+}
+.listingBar a:hover {
+  text-decoration: none;
+  background-color: #f5f5f5;
+}
 footer {
   background: #eeeeee;
   padding: 18px 0;
