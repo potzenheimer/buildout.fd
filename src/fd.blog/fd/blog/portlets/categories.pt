@@ -1,0 +1,20 @@
+<div class="well"
+     id="infobox-blog-categories"
+     i18n:domain="fd.blog">
+
+    <h4>
+        <i18n:block translate="">Categories</i18n:block>
+    </h4>
+
+    <ul>
+        <li repeat="subject view/keywords">
+          <a tal:attributes="href python:view.archive_url(subject)">
+              <span class="archive-category"
+                  tal:content="subject">
+                  Category
+              </span>
+          </a>
+        </li>
+    </ul>
+
+</div>
