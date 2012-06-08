@@ -57,10 +57,8 @@
               Weiterlesen</a>
           </div>
           </div>
-        <hr />
       </article>
     </tal:block>
-
   </section>
     
   </metal:content-core>
