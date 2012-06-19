@@ -62,7 +62,7 @@ class Assignment(base.Assignment):
         """This property is used to give the title of the portlet in the
         "manage portlets" screen.
         """
-        return _("Monthly archive")
+        return _("Blog Monthly archive")
 
 
 class Renderer(base.Renderer):

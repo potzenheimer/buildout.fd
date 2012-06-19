@@ -45,27 +45,6 @@
           &nbsp;
 
        </div>
-       <ul class="pager"
-          tal:define="next view/next;
-                      previous view/previous"
-          tal:condition="python:previous is not None or next is not None">
-        <li tal:condition="previous" class="previous">
-          <a href="#"
-            rel="tooltip"
-            tal:attributes="href previous/url;
-                            data-original-title previous/title">
-            <i class="icon-arrow-left" />
-            Zur&uuml;ck</a>
-        </li>
-        <li tal:condition="next">
-          <a href="#"
-            rel="tooltip"
-            tal:attributes="href next/url;
-                            data-original-title next/title">
-              Weiter
-            <i class="icon-arrow-right" /></a>
-        </li>
-       </ul>
 
    </tal:block>
 

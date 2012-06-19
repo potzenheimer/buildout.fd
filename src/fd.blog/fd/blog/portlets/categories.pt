@@ -3,6 +3,7 @@
      i18n:domain="fd.blog">
 
     <h4>
+        <i class="icon-tags" />
         <i18n:block translate="">Categories</i18n:block>
     </h4>
 
@@ -11,6 +12,7 @@
       <tal:block tal:repeat="item keywords">
         <li tal:define="search_url python:view.archive_url(item)">
             <a href="" tal:attributes="href search_url">
+              <i class="icon-tag" />
               <span tal:content="item" />
               (<span tal:content="python:view.count_entries(item)" />)
             </a>
