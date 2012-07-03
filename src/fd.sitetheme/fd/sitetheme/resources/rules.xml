@@ -32,8 +32,8 @@
             <link rel="shortcut icon" href="/++theme++meetshaus.jmstheme/images/favicon.ico" type="images/x-icon" />
         </after>-->
 
-        <replace css:theme="#editbar"
-            content="//div[@data-iframe='toolbar']" />
+        <!-- <replace css:theme="#editbar"
+            content="//div[@data-iframe='toolbar']" /> -->
 
         <!-- Copy over the id/class attributes on the body tag.
              This is important for per-section styling -->
@@ -42,7 +42,7 @@
 
         <drop css:theme="#editbar"
             css:if-content="#anon-personalbar" />
-        <replace css:theme-children="#edit-bar-wrapper" css:content="#edit-bar" />
+        <replace css:theme-children="#editbar" css:content="#edit-bar" />
         <replace css:theme-children="#personal-tools" 
             css:content-children="#portal-personaltools" />
 

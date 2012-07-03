@@ -11,11 +11,49 @@
   <metal:content-core define-macro="main">
 
   <header class="page-header">
-    <h1 tal:content="context/Title">Title inserted here</h1>
+    <h1 tal:content="context/Title">
+      Title inserted here</h1>
   </header>
-
+  <ul class="thumbnails">
+    <li class="span6">
+      <div class="thumbnail">
+          <img src="++theme++fd.sitetheme/img/dots.png" />
+      </div>
+    </li>
+    <li class="span6">
+      <h2>Thumbnail label</h2>
+      <p>A short introductional text would fit perfectly, don't you think...</p>
+      <p>Probably we should have some links in here too:<br />
+        <a href="#"><i class="icon-link" /> Go somewhere</a><br />
+        <a href="#"><i class="icon-link" /> Go somewhere else</a>
+      </p>
+      <p>..or you prefer buttons? No problem, here we go:</p>
+      <p><a href="#" class="btn btn-primary"><i class="icon-info-sign" />
+        Important Action to take now</a>
+      </p>
+    </li>
+  </ul>
   <div class="hero-unit">
-    <h2>Test for the frontpage header</h2>
+    <div class="row-fluid">
+      <div class="span2">
+          <i class="icon-github icon-x-large" />
+      </div>
+      <div class="span2">
+          <i class="icon-pinterest icon-x-large" />
+      </div>
+      <div class="span2">
+          <i class="icon-google-plus icon-x-large" />
+      </div>
+      <div class="span2">
+          <i class="icon-facebook icon-x-large" />
+      </div>
+      <div class="span2">
+          <i class="icon-twitter icon-x-large" />
+      </div>
+      <div class="span2">
+          <i class="icon-linkedin icon-x-large" />
+      </div>
+    </div>
   </div>
 
   <p class="documentDescription lead" tal:condition="context/Description"
@@ -28,7 +66,8 @@
       <article>
         <div class="page-header">
           <h2>
-            <a href="" tal:attributes="href item/getURL"
+            <a href=""
+                tal:attributes="href item/getURL"
                 tal:content="item/Title" />
               <small tal:content="python:toLocalizedTime(item.effective)" />
           </h2>

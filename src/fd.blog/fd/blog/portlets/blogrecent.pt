@@ -16,9 +16,9 @@
             1779</small>
         </li>
         <li>
-          <span tal:define="desc item/Description;
-                                  shortdesc python:plone_view.cropText(desc, 120, '...');"
-                    tal:replace="shortdesc" />
+          <!--<span tal:define="desc item/Description;
+                            shortdesc python:plone_view.cropText(desc, 120, '...');"
+                tal:replace="shortdesc" />-->
                 <a tal:attributes="href python:view.item_url(item)" class="link-more">
                    <i class="icon-plus-sign" /> mehr
                 </a>
