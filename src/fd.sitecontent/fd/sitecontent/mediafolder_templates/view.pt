@@ -1,0 +1,48 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="fd.sitecontent">
+<body>
+
+<metal:main fill-slot="main">
+  <metal:content-core define-macro="main">
+
+    <div class="page-header">
+      <h1 tal:content="context/Title" />
+    </div>
+
+    <p class="lead" tal:content="context/Description" />
+
+    <article tal:condition="view/has_files"
+      id="content-core">
+      <tal:block tal:repeat="item view/contained_files">
+        <div class="tileItem"
+            tal:define="type item/portal_type">
+          <h5><a href="" tal:attributes="href item/getURL"
+                tal:content="item/Title" /></h5>
+          <p class="discreet" tal:content="item/Description" />
+          <p><strong>Type:</strong> <span tal:replace="type" /></p>
+          <a href="" tal:attributes="href item/getURL">
+            View</a>
+        </div>
+      </tal:block>
+    </article>
+
+    <article class="alert alert-block alert-info"
+        tal:condition="not:view/has_files">
+      <h4 i18n:translate=""
+          class="alert-heading">No files have been added yet</h4>
+      <p i18n:translate="">Use the add menu located on the rightmost spot in
+        the editbar. Alternatively you could use the folder contents tab
+        to use the provided multi upload tool</p>
+    </article>
+    
+  </metal:content-core>
+</metal:main>
+
+</body>
+</html>
+
