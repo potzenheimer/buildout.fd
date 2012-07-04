@@ -72,6 +72,9 @@
         <!-- Columns -->
         <replace css:content-children="#infobar"
             css:theme-children="#sidebar-info" />
+        <replace css:content="#gallerybar"
+            css:theme-children="#sidebar-gallery"
+            css:if-content="#gallerybar" />
         <!--<replace css:content-children="#portal-column-one > *" css:theme-children="#column-one" />-->
         <replace css:content-children="#portal-column-two > *" css:theme-children="#sidebar" />
 
