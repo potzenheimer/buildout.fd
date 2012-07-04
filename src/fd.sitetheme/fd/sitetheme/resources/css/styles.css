@@ -4916,7 +4916,8 @@ dl.actionMenu.activated dd div {
   border-left: 13px solid rgba(0, 0, 0, 0.05);
   clear: both;
 }
-input.context {
+input.context,
+input.standalone {
   display: inline-block;
   *display: inline;
   /* IE7 inline-block hack */
@@ -4961,24 +4962,34 @@ input.context {
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 }
 input.context [class^="icon-"],
-input.context [class*=" icon-"] {
+input.standalone [class^="icon-"],
+input.context [class*=" icon-"],
+input.standalone [class*=" icon-"] {
   /* keeps button heights with and without icons the same */
 
   line-height: .9em;
 }
 input.context:hover,
+input.standalone:hover,
 input.context:active,
+input.standalone:active,
 input.context.active,
+input.standalone.active,
 input.context.disabled,
-input.context[disabled] {
+input.standalone.disabled,
+input.context[disabled],
+input.standalone[disabled] {
   background-color: #e6e6e6;
   *background-color: #d9d9d9;
 }
 input.context:active,
-input.context.active {
+input.standalone:active,
+input.context.active,
+input.standalone.active {
   background-color: #cccccc \9;
 }
-input.context:first-child {
+input.context:first-child,
+input.standalone:first-child {
   *margin-left: 0;
 }
 #category {

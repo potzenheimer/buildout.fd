@@ -1,0 +1,35 @@
+<div id="gallerybar" class="well">
+  <div class="carousel slide">
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+    <div class="active item">
+      First Item
+      <div class="carousel-caption">
+        <h4>First Thumbnail label</h4>
+        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam</p>
+      </div>
+    </div>
+      <div class="item">
+        Second Item
+        <div class="carousel-caption">
+          <h4>Second Thumbnail label</h4>
+          <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam</p>
+        </div>
+      </div>
+      <div class="item">
+        Third Item
+        <div class="carousel-caption">
+          <h4>Third Thumbnail label</h4>
+          <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam</p>
+        </div>
+      </div>
+    </div>
+   <!-- Carousel nav -->
+  <a class="carousel-control left"
+    href="#gallerybar"
+    data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right"
+    href="#gallerybar"
+    data-slide="next">&rsaquo;</a>
+  </div>
+</div>

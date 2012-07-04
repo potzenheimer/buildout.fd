@@ -1,0 +1,34 @@
+<section id="infobar">
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="#profile" data-toggle="tab">Profil</a></li>
+      <li><a href="#imprint" data-toggle="tab">Impressum</a></li>
+    </ul>
+    <div class="tab-content">
+    <div class="tab-pane active" id="profile">
+        <div tal:attributes="data-tile string:${viewlet/portal_url}/@@vwc.tiles.richtext/profile" />
+    </div>
+    <div class="tab-pane" id="imprint">
+        <div tal:attributes="data-tile string:${viewlet/portal_url}/@@vwc.tiles.richtext/imprint" />
+    </div>
+    <div class="visualClear">&nbsp;</div>
+    <div class="well">
+        <h4>
+            <i class="icon-share" />
+            <i18n:block translate="">Follow Fleckendeckend</i18n:block>
+        </h4>
+        <div class="row-fluid">
+          <div class="span3">
+              <a href="#"><i class="icon-pinterest icon-large" /></a>
+          </div>
+          <div class="span3">
+              <a href="#"><i class="icon-google-plus icon-large" /></a>
+          </div>
+          <div class="span3">
+              <a href="#"><i class="icon-facebook icon-large" /></a>
+          </div>
+          <div class="span3">
+              <a href="#"><i class="icon-twitter icon-large" /></a>
+          </div>
+        </div>
+  </div>
+</section>
