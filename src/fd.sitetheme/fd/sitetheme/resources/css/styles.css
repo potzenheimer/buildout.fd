@@ -5047,6 +5047,12 @@ input.standalone:first-child {
   text-decoration: none;
   background-color: #f5f5f5;
 }
+#infobar-social {
+  padding: 18px 0px 0px;
+}
+#infobar-social a {
+  color: #333333;
+}
 footer {
   background: #eeeeee;
   margin-top: 18px;

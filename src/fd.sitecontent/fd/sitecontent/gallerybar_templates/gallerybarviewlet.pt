@@ -1,29 +1,13 @@
 <div id="gallerybar" class="well">
-  <div class="carousel slide">
+  <div class="carousel slide" id="gallery">
   <!-- Carousel items -->
-  <div class="carousel-inner">
-    <div class="active item">
-      First Item
-      <div class="carousel-caption">
-        <h4>First Thumbnail label</h4>
-        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam</p>
+  <div class="carousel-inner items">
+    <tal:images tal:condition="viewlet/has_images">
+      <div class="item" tal:repeat="item viewlet/images">
+        <img tal:replace="structure item/image_tag" />
+        <p tal:content="item/title" />
       </div>
-    </div>
-      <div class="item">
-        Second Item
-        <div class="carousel-caption">
-          <h4>Second Thumbnail label</h4>
-          <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam</p>
-        </div>
-      </div>
-      <div class="item">
-        Third Item
-        <div class="carousel-caption">
-          <h4>Third Thumbnail label</h4>
-          <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam</p>
-        </div>
-      </div>
-    </div>
+    </tal:images>
    <!-- Carousel nav -->
   <a class="carousel-control left"
     href="#gallerybar"

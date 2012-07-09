@@ -16,19 +16,17 @@
             <i class="icon-share" />
             <i18n:block translate="">Follow Fleckendeckend</i18n:block>
         </h4>
+        <div id="infobar-social">
         <div class="row-fluid">
-          <div class="span3">
-              <a href="#"><i class="icon-pinterest icon-large" /></a>
+          <div class="span6">
+            <a href="http://facebook.com">
+              <i class="icon-facebook-sign icon-x-large" /></a>
           </div>
-          <div class="span3">
-              <a href="#"><i class="icon-google-plus icon-large" /></a>
+          <div class="span6">
+            <a href="http:/twitter.com">
+            <i class="icon-twitter-sign icon-x-large" /></a>
           </div>
-          <div class="span3">
-              <a href="#"><i class="icon-facebook icon-large" /></a>
-          </div>
-          <div class="span3">
-              <a href="#"><i class="icon-twitter icon-large" /></a>
-          </div>
+        </div>
         </div>
   </div>
 </section>
