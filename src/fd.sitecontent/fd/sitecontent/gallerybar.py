@@ -46,9 +46,11 @@ class GalleryBarViewlet(grok.Viewlet):
         pstate = getMultiAdapter((self.context, self.request),
                                  name="plone_portal_state")
         portal = pstate.portal()
-        gallery = portal['gallery']
-        if gallery:
+        try:
+            gallery = portal['gallery']
             return gallery
+        except:
+            return None
 
     def getImageTag(self, item):
         obj = item
