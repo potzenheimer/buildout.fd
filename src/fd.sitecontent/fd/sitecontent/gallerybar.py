@@ -25,12 +25,13 @@ class GalleryBarViewlet(grok.Viewlet):
     def images(self):
         items = []
         data = self._gallery_data()
-        for item in data:
-            info = {}
-            info['title'] = item.Title
-            info['url'] = item.getURL()
-            info['image_tag'] = self.getImageTag(item.getObject())
-            items.append(info)
+        if data:
+            for item in data:
+                info = {}
+                info['title'] = item.Title
+                info['url'] = item.getURL()
+                info['image_tag'] = self.getImageTag(item.getObject())
+                items.append(info)
         return items
 
     def _gallery_data(self):
