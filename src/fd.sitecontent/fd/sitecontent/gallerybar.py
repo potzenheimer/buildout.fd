@@ -37,10 +37,12 @@ class GalleryBarViewlet(grok.Viewlet):
         context = aq_inner(self.context)
         catalog = getToolByName(context, 'portal_catalog')
         gallery = self._mediafolder()
-        results = catalog(object_provides=IATBlobImage.__identifier__,
-                          path=dict(query='/'.join(gallery.getPhysicalPath()),
-                                    depth=1))
-        return results
+        if gallery:
+            results = catalog(
+                        object_provides=IATBlobImage.__identifier__,
+                        path=dict(query='/'.join(gallery.getPhysicalPath()),
+                                  depth=1))
+            return results
 
     def _mediafolder(self):
         pstate = getMultiAdapter((self.context, self.request),
