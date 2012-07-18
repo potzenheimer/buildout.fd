@@ -13,6 +13,14 @@
             $('a[rel=tooltip]').tooltip();
             $('span[rel=twipsy]').tooltip();
         });
-        $('#gallery').carousel();
+        // $('#gallery').carousel();
+        $("#gallerytabs").tabs('.items > div.item', {
+            effect: 'fade',
+            fadeOutSpeed: 1000,
+            rotate: true
+        }).slideshow({
+            autoplay: true,
+            interval: 6000
+        });
     });
 }(jQuery));

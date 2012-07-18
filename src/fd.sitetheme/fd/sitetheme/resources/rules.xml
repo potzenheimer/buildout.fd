@@ -16,12 +16,12 @@
         <after content="/html/head/meta" theme-children="/html/head" />
         <!-- Copy style, script and link tags in the order they appear in the content -->
         <after
-            content="/html/head/style | /html/head/script | /html/head/link"
+            content="/html/head/style | /html/head/link"
             theme-children="/html/head"
             />
 
-        <!--<after content="/html/head/script" 
-            theme="/html/body/footer" />-->
+        <after content="/html/head/script" 
+            theme="/html/body/footer" />
 
         <drop theme="/html/head/style" />
         <drop theme="/html/head/script" />
@@ -73,7 +73,7 @@
         <replace css:content-children="#infobar"
             css:theme-children="#sidebar-info" />
         <replace css:content="#gallerybar"
-            css:theme-children="#sidebar-gallery"
+            css:theme="#sidebar-gallery"
             css:if-content="#gallerybar" />
         <!--<replace css:content-children="#portal-column-one > *" css:theme-children="#column-one" />-->
         <replace css:content-children="#portal-column-two > *" css:theme-children="#sidebar" />

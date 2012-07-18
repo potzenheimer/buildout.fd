@@ -29,6 +29,7 @@ class GalleryBarViewlet(grok.Viewlet):
             for item in data:
                 info = {}
                 info['title'] = item.Title
+                info['id'] = item.getId
                 info['url'] = item.getURL()
                 info['image_tag'] = self.getImageTag(item.getObject())
                 items.append(info)
@@ -58,7 +59,7 @@ class GalleryBarViewlet(grok.Viewlet):
     def getImageTag(self, item):
         obj = item
         scales = getMultiAdapter((obj, self.request), name='images')
-        scale = scales.scale('image', width='250', height='250')
+        scale = scales.scale('image', width=260, height=260)
         imageTag = None
         if scale is not None:
             imageTag = scale.tag()

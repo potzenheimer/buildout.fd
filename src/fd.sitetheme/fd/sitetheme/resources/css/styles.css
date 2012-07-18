@@ -5053,6 +5053,50 @@ input.standalone:first-child {
 #infobar-social a {
   color: #333333;
 }
+#gallery {
+  /* tabs (those little circles below slides) */
+
+}
+#gallery .items {
+  position: relative;
+  width: 260px;
+  height: 160px;
+  margin: 0px;
+  cursor: pointer;
+}
+#gallery .items .item {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0px;
+  padding: 0;
+  width: 260px;
+  height: 160px;
+  font-size: 13px;
+}
+#gallery #gallerytabs {
+  clear: both;
+  display: block;
+}
+#gallery #gallerytabs a {
+  width: 8px;
+  height: 8px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  float: left;
+  margin: 3px;
+  background: #999999;
+  display: block;
+  font-size: 1px;
+}
+#gallery #gallerytabs a:hover {
+  background: #555555;
+}
+#gallery #gallerytabs a.current {
+  background: #555555;
+}
 footer {
   background: #eeeeee;
   margin-top: 18px;

@@ -114,6 +114,46 @@ input.standalone {
     }
 }
 
+#gallery {
+    .items {
+        position:relative;
+        .size(160px, 260px);
+        margin:0px;
+        cursor:pointer;
+        .item {
+            display:none;
+            position:absolute;
+            top:0;
+            left:0;
+            margin:0px;
+            padding:0;
+            .size(160px, 260px);
+            font-size:@baseFontSize;
+        }
+    }
+    /* tabs (those little circles below slides) */
+    #gallerytabs {
+        clear:both;
+        display: block;
+        //z-index: @zindexModal;
+        a {
+            .square(8px);
+            .border-radius(50%);
+            float:left;
+            margin:3px;
+            background:@grayLight;
+            display:block;
+            font-size:1px;
+            &:hover {
+                background:@gray;
+            }
+            &.current {
+                background:@gray;
+            }
+        }
+    }
+}
+
 footer {
     background: @grayLighter;
     margin-top: @baseLineHeight;
