@@ -1,7 +1,7 @@
 <section id="infobar">
     <ul class="nav nav-tabs">
       <li class="active"><a href="#profile" data-toggle="tab">Profil</a></li>
-      <li><a href="#imprint" data-toggle="tab">Impressum</a></li>
+      <li><a href="#imprint" data-toggle="tab">Kontakt</a></li>
     </ul>
     <div class="tab-content">
     <div class="tab-pane active" id="profile">
@@ -19,11 +19,11 @@
         <div id="infobar-social">
         <div class="row-fluid">
           <div class="span6">
-            <a href="http://facebook.com">
+            <a href="https://www.facebook.com/Fleckendeckend">
               <i class="icon-facebook-sign icon-x-large" /></a>
           </div>
           <div class="span6">
-            <a href="http:/twitter.com">
+            <a href="https://twitter.com/Fleckendeckend">
             <i class="icon-twitter-sign icon-x-large" /></a>
           </div>
         </div>
