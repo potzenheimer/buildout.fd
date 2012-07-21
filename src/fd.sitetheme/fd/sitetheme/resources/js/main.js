@@ -22,5 +22,9 @@
             autoplay: true,
             interval: 6000
         });
+        $("div#viewlet-social-like").each(function () {
+            $(this).fadeIn(3000);
+            $(this).removeAttr("style");
+        });
     });
 }(jQuery));

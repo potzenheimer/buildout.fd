@@ -33,9 +33,9 @@
     tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime;
                 Batch python:modules['Products.CMFPlone'].Batch;
                 b_size python:5;b_start python:0;b_start request/b_start | b_start;">
-    <tal:entries tal:define="items view/blogitems;
-                             batch python:Batch(items, b_size, int(b_start), orphan=1);">
-    <tal:block tal:repeat="item batch">
+
+    <tal:entries tal:define="items view/blogitems">
+    <tal:block tal:repeat="item items">
       <article>
         <div class="page-header">
           <h2>
@@ -49,19 +49,9 @@
             class="documentDescription lead"
             tal:content="item/Description" />
 
-          <tal:block tal:define="count repeat/item/number;
-                                       bodytext item/text/output;
-                                       item_obj item/getObject;
-                                       rawtext item_obj/@@text-transform/text/text/plain">
+          <tal:block tal:define="count repeat/item/number;">
             <div tal:condition="python:count == 1" class="entry-body">
                 <div tal:content="structure item/text/output" />
-            </div>
-            <div tal:condition="python:count > 1"
-                class="entry-body"
-                tal:define="richtext python:context.restrictedTraverse('@@plone').cropText(rawtext, 120, '[...]')">
-                <p><span tal:replace="richtext" />
-                    <a href="" tal:attributes="href item/getURL">weiterlesen</a>
-                </p>
             </div>
           </tal:block>
 
@@ -87,12 +77,14 @@
           </div>
           </div>
       </article>
-          <div metal:use-macro="here/batch_macros/macros/navigation" />
     </tal:block>
-    <div metal:use-macro="here/batch_macros/macros/navigation" />
     </tal:entries>
   </section>
-    
+  <a href="" class="btn btn-primary"
+    tal:define="portal_url context/portal_url"
+    tal:attributes="href python:portal_url + '/blog'">
+    <i class="icon-plus-sign" />
+    Weitere Artikel</a>
   </metal:content-core>
 </metal:main>
 

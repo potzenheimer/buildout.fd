@@ -62,5 +62,5 @@ class BlogView(grok.View):
                 enddate = DateTime(year, 12, 31, 0, 0)
             query['effective'] = dict(query=(startdate, enddate),
                                       range='minmax')
-        results = catalog.searchResults(**query)
+        results = catalog.searchResults(**query)[:5]
         return IContentListing(results)
