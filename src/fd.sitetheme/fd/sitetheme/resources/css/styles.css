@@ -4987,6 +4987,9 @@ table.grid th {
 .lobstertwo {
   font-family: 'Lobster Two';
 }
+input.datetime-widget {
+  width: auto;
+}
 h1.documentFirstHeading {
   padding-bottom: 17px;
   margin: 18px 0;
