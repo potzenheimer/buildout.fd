@@ -29,6 +29,12 @@
   <p class="documentDescription lead" tal:condition="context/Description"
     tal:content="context/Description" />
 
+  <div class="page-header">
+    <h1><i class="icon-bullhorn" /> Fleckendeckend &ndash;
+      <small><em>Blog</em></small>
+    </h1>
+  </div>
+
   <section tal:condition="view/blogitems"
     tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime;
                 Batch python:modules['Products.CMFPlone'].Batch;

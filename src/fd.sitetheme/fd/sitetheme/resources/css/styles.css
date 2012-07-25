@@ -4990,6 +4990,9 @@ table.grid th {
 input.datetime-widget {
   width: auto;
 }
+.page-header {
+  margin: 9px 0 18px;
+}
 h1.documentFirstHeading {
   padding-bottom: 17px;
   margin: 18px 0;

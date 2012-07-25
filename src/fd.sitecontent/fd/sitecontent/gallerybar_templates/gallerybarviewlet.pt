@@ -1,21 +1,12 @@
 <div id="gallerybar" class="well"
    tal:condition="viewlet/has_images">
   <div class="carousel slide" id="gallery">
-  <!-- Carousel items -->
   <div class="carousel-inner items">
     <tal:images>
       <div class="item" tal:repeat="item viewlet/images">
         <img tal:replace="structure item/image_tag" />
-        <p tal:content="item/title" />
       </div>
     </tal:images>
-   <!-- Carousel nav -->
-  <!--<a class="carousel-control left"
-    href="#gallerybar"
-    data-slide="prev">&lsaquo;</a>
-  <a class="carousel-control right"
-    href="#gallerybar"
-    data-slide="next">&rsaquo;</a>-->
   </div>
   <div id="gallerytabs">
     <tal:tabnav tal:repeat="tab viewlet/images">
