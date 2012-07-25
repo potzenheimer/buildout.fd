@@ -166,9 +166,13 @@ input.standalone {
 #gallery {
     .items {
         position:relative;
-        .size(160px, 260px);
+        .size(260px, 260px);
         margin:0px;
         cursor:pointer;
+        border: 1px solid @grayLighter;
+        .border-radius(4px);
+        background: @white;
+        .box-shadow(0px 1px 1px rgba(0,0,0,.075));
         .item {
             display:none;
             position:absolute;
@@ -176,8 +180,11 @@ input.standalone {
             left:0;
             margin:0px;
             padding:0;
-            .size(160px, 260px);
+            .size(260px, 260px);
             font-size:@baseFontSize;
+            img {
+                .center-block();
+            }
         }
     }
     /* tabs (those little circles below slides) */
