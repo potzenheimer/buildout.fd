@@ -12,16 +12,13 @@
         <li class="nav-header">
           <i class="icon-file" />
           <span tal:content="item/Title">Entry Title</span>
-          <small tal:content="python:plone_view.toLocalizedTime(item.ModificationDate)">
+          <small tal:content="python:plone_view.toLocalizedTime(item.Date)">
             1779</small>
         </li>
         <li>
-          <!--<span tal:define="desc item/Description;
-                            shortdesc python:plone_view.cropText(desc, 120, '...');"
-                tal:replace="shortdesc" />-->
-                <a tal:attributes="href python:view.item_url(item)" class="link-more">
-                   <i class="icon-plus-sign" /> mehr
-                </a>
+            <a tal:attributes="href python:view.item_url(item)" class="link-more">
+               <i class="icon-plus-sign" /> mehr
+            </a>
         </li>
         <li class="divider"></li>
       </tal:block>

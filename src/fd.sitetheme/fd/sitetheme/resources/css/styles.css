@@ -4992,6 +4992,9 @@ h1.documentFirstHeading {
   margin: 18px 0;
   border-bottom: 1px solid #eeeeee;
 }
+#blog-link {
+  padding: 18px 0;
+}
 .discreet {
   color: #666;
   font-size: 85%;

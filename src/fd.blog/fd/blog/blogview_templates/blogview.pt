@@ -80,11 +80,13 @@
     </tal:block>
     </tal:entries>
   </section>
-  <a href="" class="btn btn-primary"
-    tal:define="portal_url context/portal_url"
-    tal:attributes="href python:portal_url + '/blog'">
-    <i class="icon-plus-sign" />
-    Weitere Artikel</a>
+  <div id="blog-link">
+    <a href="" class="btn btn-primary"
+      tal:define="portal_url context/portal_url"
+      tal:attributes="href python:portal_url + '/blog'">
+      <i class="icon-plus-sign" />
+      Weitere Artikel</a>
+  </div>
   </metal:content-core>
 </metal:main>
 
