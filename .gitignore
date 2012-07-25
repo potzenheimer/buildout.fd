@@ -21,6 +21,7 @@ var
 *.pyc
 *.pyo
 etc/**/*
+src/collective.disqus
 src/plone.app.blocks
 src/plone.app.tiles
 src/plone.tiles
