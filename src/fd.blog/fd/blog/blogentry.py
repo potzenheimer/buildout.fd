@@ -2,7 +2,6 @@ from five import grok
 from plone.directives import dexterity, form
 from zope import schema
 from plone.namedfile.interfaces import IImageScaleTraversable
-from plone.namedfile.field import NamedBlobImage
 
 from plone.app.textfield import RichText
 try:
