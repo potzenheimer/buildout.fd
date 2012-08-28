@@ -15,17 +15,21 @@ body {
     }
 }
 
-#editbar-wrapper + nav {
+#editbar-wrapper + nav,
+#toolbar + nav {
     margin-top: @navbarHeight;
 }
 
 #topnav {
-    .container {
-        width: @gridRowWidth;
-        .container-fixed();
-    }
-    .brand {
-        font-family: 'Lobster Two';
+    .navbar-inner {
+        .border-radius(0);
+        .container {
+            width: @gridRowWidth;
+            .container-fixed();
+        }
+        .brand {
+            font-family: 'Lobster Two';
+        }
     }
 }
 
