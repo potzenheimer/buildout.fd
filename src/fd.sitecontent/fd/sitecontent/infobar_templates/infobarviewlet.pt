@@ -18,13 +18,18 @@
         </h4>
         <div id="infobar-social">
         <div class="row-fluid">
-          <div class="span6">
+          <div class="span3">
             <a href="https://www.facebook.com/Fleckendeckend">
               <i class="icon-facebook-sign icon-x-large" /></a>
           </div>
-          <div class="span6">
+          <div class="span3">
             <a href="https://twitter.com/Fleckendeckend">
             <i class="icon-twitter-sign icon-x-large" /></a>
+          </div>
+          <div class="span3">
+            <a href="http://pinterest.com/lisafigas/fleckendeckend/">
+              <i class="icon-pinterest-sign icon-x-large" />
+            </a> 
           </div>
         </div>
         </div>
