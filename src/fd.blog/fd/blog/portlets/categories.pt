@@ -9,6 +9,13 @@
 
     <ul class="nav nav-pills nav-stacked"
         tal:define="keywords view/keywords">
+        <li tal:define="blog_url view/blog_url">
+          <a href="" tal:attributes="href blog_url">
+            <i class="icon-tags" />
+            Alle Artikel
+            (<span tal:content="view/count_all_entries" />)
+          </a>
+        </li>
       <tal:block tal:repeat="item keywords">
         <li tal:define="search_url python:view.archive_url(item)">
             <a href="" tal:attributes="href search_url">

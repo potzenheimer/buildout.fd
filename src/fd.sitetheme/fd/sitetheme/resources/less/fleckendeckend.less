@@ -24,13 +24,17 @@ body {
     .navbar-inner {
         .border-radius(0);
         .container {
-            width: @gridRowWidth;
-            .container-fixed();
+            //width: @gridRowWidth;
+            //.container-fixed();
         }
         .brand {
             font-family: 'Lobster Two';
         }
     }
+}
+
+body > header {
+    margin-bottom: @baseLineHeight + 2;
 }
 
 .cutout-box {
@@ -177,6 +181,8 @@ input.standalone {
 }
 
 #gallery {
+    .square(260px);
+    .center-block();
     .items {
         position:relative;
         .size(260px, 260px);

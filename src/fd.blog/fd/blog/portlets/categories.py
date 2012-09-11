@@ -77,10 +77,19 @@ class Renderer(base.Renderer):
                                      sub)
         return url
 
+    def blog_url(self):
+        assignment_context = find_assignment_context(self.data, self.context)
+        return assignment_context.absolute_url()
+
     def count_entries(self, subject):
         catalog = getToolByName(self.context, 'portal_catalog')
         brains = catalog(object_provides=IBlogEntry.__identifier__,
                          Subject=subject.encode('utf-8'))
+        return len(brains)
+
+    def count_all_entries(self):
+        catalog = getToolByName(self.context, 'portal_catalog')
+        brains = catalog(object_provides=IBlogEntry.__identifier__)
         return len(brains)
 
 
