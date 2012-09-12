@@ -6143,7 +6143,7 @@ body {
   border-radius: 0;
 }
 #topnav .navbar-inner .brand {
-  font-family: 'Lobster Two', inherit;
+  font-family: 'Lobster Two';
 }
 body > header {
   margin-bottom: 20px;
