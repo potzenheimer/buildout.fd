@@ -5,7 +5,7 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
     <theme href="minimal.html" if-path="@@edit-tile" />
-    <theme href="showroom1.html" if-path="geschenkpapier/eule-pudding" />
+    <theme href="showroom.html" if-path="geschenkpapier/eule-pudding" />
     <theme href="showroom1.html" if-path="geschenkpapier/oktopus-vanillekipferl" />
     
     <!-- Rules applying to a standard Plone web page -->
