@@ -5,6 +5,7 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
     <theme href="minimal.html" if-path="@@edit-tile" />
+    <theme href="showroom.html" css:if-content="body.section-geschenkpapier" />
     
     <!-- Rules applying to a standard Plone web page -->
     <rules css:if-content="#visual-portal-wrapper">
@@ -13,7 +14,7 @@
 
         <replace theme="/html/head/title" content="/html/head/title" />
         <replace theme="/html/head/base" content="/html/head/base" />
-        
+
         <!-- Add meta tags -->
         <drop theme="/html/head/meta" />
         

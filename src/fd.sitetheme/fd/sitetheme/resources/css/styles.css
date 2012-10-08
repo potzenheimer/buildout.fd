@@ -6498,3 +6498,52 @@ footer {
   padding: 18px 0;
   border-top: 1px solid #555555;
 }
+body.section-geschenkpapier html,
+body.section-geschenkpapier body,
+body.section-geschenkpapier #bg,
+body.section-geschenkpapier #bg table,
+body.section-geschenkpapier #bg td {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+body.section-geschenkpapier #bg {
+  position: fixed;
+  z-index: 0;
+}
+body.section-geschenkpapier #bg div {
+  height: 200%;
+  left: -50%;
+  position: absolute;
+  top: -50%;
+  width: 200%;
+  z-index: 0;
+}
+body.section-geschenkpapier #bg td {
+  text-align: center;
+  vertical-align: middle;
+}
+body.section-geschenkpapier #bg img {
+  margin: 0 auto;
+  min-height: 50%;
+  min-width: 50%;
+  z-index: 0;
+}
+body.section-geschenkpapier div#page_wrapper {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  z-index: 2 !important;
+  width: 100%;
+}
+body.section-geschenkpapier header,
+body.section-geschenkpapier section.container {
+  display: block;
+  position: relative;
+}
+body.section-geschenkpapier #page_wrapper header {
+  margin-bottom: 20px;
+}
+body.section-geschenkpapier .well {
+  background-color: rgba(245, 245, 245, 0.8);
+}
