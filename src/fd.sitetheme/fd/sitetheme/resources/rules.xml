@@ -89,6 +89,11 @@
             css:theme="#footerbar"
             css:if-content="#seobar" />
 
+        <rules css:if-content="body.section-geschenkpapier">
+            <replace css:content-children="#paper-infobar"
+                css:theme-children="#sidebar-infobox" />
+        </rules>
+
     </rules>
 
 </rules>

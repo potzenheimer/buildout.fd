@@ -14,3 +14,10 @@ class InfoBarViewlet(grok.Viewlet):
         pstate = getMultiAdapter((self.context, self.request),
                                  name="plone_portal_state")
         self.portal_url = pstate.portal_url()
+
+
+class PaperInfoViewlet(grok.Viewlet):
+    grok.name('fd.sitecontent.PaperInfoViewlet')
+    grok.context(Interface)
+    grok.require('zope2.View')
+    grok.viewletmanager(IPortalFooter)
