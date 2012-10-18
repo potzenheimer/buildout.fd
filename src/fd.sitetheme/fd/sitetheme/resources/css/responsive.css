@@ -716,6 +716,10 @@
     padding-left: 20px;
     padding-right: 20px;
   }
+  body.fullscreen {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
   .navbar-fixed-top,
   .navbar-fixed-bottom {
     margin-left: -20px;
