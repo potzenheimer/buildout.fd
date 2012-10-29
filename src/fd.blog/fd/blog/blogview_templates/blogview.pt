@@ -15,16 +15,10 @@
       <small><em>nachhaltiges Geschenkpapier</em></small>
     </h1>
   </header>
-  <ul class="thumbnails">
-    <li class="span6">
-      <div class="thumbnail">
-          <img src="++theme++fd.sitetheme/img/dots.png" />
-      </div>
-    </li>
-    <li class="span6">
-      <div tal:attributes="data-tile string:${context/absolute_url}/@@vwc.tiles.richtext/introduction" />
-    </li>
-  </ul>
+
+  <section class="container-fluid">
+    <div tal:attributes="data-tile string:${context/absolute_url}/@@vwc.tiles.richtext/introduction" />
+  </section>
 
   <p class="documentDescription lead" tal:condition="context/Description"
     tal:content="context/Description" />
