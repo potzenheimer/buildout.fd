@@ -2,7 +2,7 @@
 //--------------------------------------
 
 body {
-    background: url(../img/bg-noise.png) repeat 0 0 @white;
+    background: url(../img/bg-noise.png) repeat 0 0 #fff;
 }
 
 .make-some-noise {
@@ -11,18 +11,18 @@ body {
 
 #editbar-wrapper {
     .navbar-inner {
-        #gradient > .vertical(@grayLight, @grayLight);
+        #gradient > .vertical(@gray-light, @gray-light);
     }
 }
 
 #editbar-wrapper + nav,
 #toolbar + nav {
-    margin-top: @navbarHeight;
+    margin-top: @navbar-height;
 }
 
 #topnav {
     .navbar-inner {
-        .border-radius(0);
+        border-radius:0;
         .brand {
             font-family: 'Lobster Two';
         }
@@ -30,7 +30,7 @@ body {
 }
 
 body > header {
-    margin-bottom: @baseLineHeight + 2;
+    margin-bottom: @line-height-computed + 2;
 }
 
 .cutout-box {
@@ -39,7 +39,6 @@ body > header {
 
 .icon-x-large {
     font-size: 60px;
-    //color: @linkColor;
 }
 
 .lobstertwo {
@@ -51,17 +50,17 @@ input.datetime-widget {
 }
 
 .page-header {
-    margin: @baseLineHeight / 2 0 @baseLineHeight;
+    margin: @line-height-computed / 2 0 @line-height-computed;
 }
 
 h1.documentFirstHeading {
-  padding-bottom: @baseLineHeight - 1;
-  margin: @baseLineHeight 0;
-  border-bottom: 1px solid @grayLighter;
+  padding-bottom: @line-height-computed - 1;
+  margin: @line-height-computed 0;
+  border-bottom: 1px solid @gray-lighter;
 }
 
 #blog-link {
-    padding: @baseLineHeight 0;
+    padding: @line-height-computed 0;
 }
 
 .discreet {
@@ -72,13 +71,13 @@ h1.documentFirstHeading {
 
 .visualHighlight {
     //background-color: #ffb;
-    background-color: @infoBackground;
+    background-color: @state-info-bg;
 }
 
 .pullquote {
     margin: 0 1em 0.5em 0.5em;
     font-weight: bold;
-    line-height: @baseLineHeight;
+    line-height: @line-height-computed;
     float: right;
     width: 35%;
     clear: right;
@@ -88,8 +87,8 @@ h1.documentFirstHeading {
 }
 .callout {
     background: #f5f5f5;
-    padding: @baseLineHeight;
-    border-left: @baseFontSize solid rgba(0,0,0,.05);
+    padding: @line-height-computed;
+    border-left: @font-size-base solid rgba(0,0,0,.05);
     clear: both;
 }
 
@@ -97,11 +96,11 @@ h1.documentFirstHeading {
 
 .image-left {
    float: left;
-   margin: @baseLineHeight / 2 @baseLineHeight @baseLineHeight 0;
+   margin: @line-height-computed / 2 @line-height-computed @line-height-computed 0;
 }
 .image-right {
    float: right;
-   margin: @baseLineHeight / 2;
+   margin: @line-height-computed / 2;
 }
 .image-inline {
    float: none;
@@ -131,17 +130,17 @@ input.standalone {
 
 #category {
     font-size: 11px;
-    margin: @baseLineHeight 0px;
+    margin: @line-height-computed 0px;
     a.link-category,
     span.selectedTag {
         padding: 0.25em 0.5em;
-        background: @linkColor;
-        color: @white;
+        background: @link-color;
+        color: #fff;
         border-radius: 0.5em;
-        .border-radius(4px);
+        border-radius:4px;
     }
     a.link-category:hover {
-        background: @linkColorHover;
+        background: @link-hover-color;
     }
     .separator {
         display: none;
@@ -154,8 +153,8 @@ input.standalone {
         display: inline-block;
         padding: 5px 14px;
         background-color: #fff;
-        border: 1px solid @grayLight;
-        .border-radius(4px);
+        border: 1px solid @gray-light;
+        border-radius:4px;
         font-size: 11px;
         &.next {
             float: right;
@@ -171,9 +170,9 @@ input.standalone {
 }
 
 #infobar-social {
-    padding: @baseLineHeight 0px 0px;
+    padding: @line-height-computed 0px 0px;
     a {
-        color: @grayDark;
+        color: @gray-dark;
     }
 }
 
@@ -185,9 +184,9 @@ input.standalone {
         .size(260px, 260px);
         margin:0px;
         cursor:pointer;
-        border: 1px solid @grayLighter;
-        .border-radius(4px);
-        background: @white;
+        border: 1px solid @gray-lighter;
+        border-radius:4px;
+        background: #fff;
         .box-shadow(0px 1px 1px rgba(0,0,0,.075));
         .item {
             display:none;
@@ -197,7 +196,7 @@ input.standalone {
             margin:0px;
             padding:0;
             .size(260px, 260px);
-            font-size:@baseFontSize;
+            font-size:@font-size-base;
             img {
                 .center-block();
             }
@@ -210,10 +209,10 @@ input.standalone {
         //z-index: @zindexModal;
         a {
             .square(8px);
-            .border-radius(50%);
+            border-radius: 50%;
             float:left;
             margin:3px;
-            background:@grayLight;
+            background:@gray-light;
             display:block;
             font-size:1px;
             &:hover {
@@ -227,9 +226,9 @@ input.standalone {
 }
 
 dl.portletTwitterPortlet {
-    padding: @baseLineHeight;
+    padding: @line-height-computed;
     dt.portletHeader {
-        font-size: @baseFontSize + 1;
+        font-size: @font-size-base + 1;
         .portletTopLeft:before {
             font-family: FontAwesome;
             font-weight: normal;
@@ -244,9 +243,9 @@ dl.portletTwitterPortlet {
 }
 
 footer {
-    background: @grayLighter;
-    margin-top: @baseLineHeight;
-    padding: @baseLineHeight 0;
+    background: @gray-lighter;
+    margin-top: @line-height-computed;
+    padding: @line-height-computed 0;
     border-top: 1px solid @gray;
 }
 
