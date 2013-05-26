@@ -28,12 +28,13 @@
                 <small tal:content="python:toLocalizedTime(item.effective)" />
           </h2>
         </div>
-          <p tal:condition="item/Description"
+          <p class="lead"
+            tal:condition="item/Description"
             tal:content="item/Description" />
 
-        <a href="" class="btn btn-small"
+        <a href="" class="btn btn-default btn-small"
               tal:attributes="href item/getURL">
-              <i class="icon-eye-open" />
+              <i class="icon-eye-open"></i>
               Weiterlesen</a>
       </article>
     </tal:block>

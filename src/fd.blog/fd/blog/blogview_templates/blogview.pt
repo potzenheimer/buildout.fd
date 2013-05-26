@@ -55,19 +55,20 @@
             </div>
           </tal:block>
 
-          <a href="" class="btn xbtn-small"
+          <a href="" class="btn btn-default"
             tal:attributes="href item/getURL">
-            <i class="icon-eye-open" />
+            <i class="icon-eye-open"></i>
             Weiterlesen</a>
       </article>
     </tal:block>
     </tal:entries>
   </section>
+  <hr>
   <div id="blog-link">
     <a href="" class="btn btn-primary"
       tal:define="portal_url context/portal_url"
       tal:attributes="href python:portal_url + '/blog'">
-      <i class="icon-plus-sign" />
+      <i class="icon-plus-sign"></i>
       Weitere Artikel</a>
   </div>
   </metal:content-core>
