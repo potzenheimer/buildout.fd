@@ -11,7 +11,7 @@ env.hosts = ['zope8']
 env.webserver = '/opt/webserver/buildout.webserver'
 env.code_root = '/opt/sites/fleckendeckend/buildout.fleckendeckend'
 env.local_root = '/Users/cb/dev/fd/buildout.fd'
-env.sitename = 'fd'
+env.sitename = 'fleckendeckend'
 env.code_user = 'root'
 env.prod_user = 'www'
 
